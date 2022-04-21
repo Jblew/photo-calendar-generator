@@ -1,4 +1,5 @@
 import { config } from "@/config"
+import { Day, EmptyDay } from "./Day"
 
 export function MonthPage(
     { startDate }:
@@ -15,9 +16,13 @@ function CalendarDays({ date }: { date: Date }) {
     const numberOfDays = getNumberOfDaysInMonth(date)
     return <div className="calendar-days">
         {config.daysOfWeek.map(name => (<div key={name} className="day-of-week">{name}</div>))}
-        {[...Array(emptyDaysCount)].map((_, i) => (<div key={i} className="day empty"></div>))}
-        {[...Array(numberOfDays)].map((_, i) => i + 1).map(day => (<div key={day} className="day digit">{day}</div>))}
+        {[...Array(emptyDaysCount)].map((_, i) => (<EmptyDay key={`empty-${i}`} />))}
+        {[...Array(numberOfDays)].map((_, i) => (<Day key={`full-${i}`} date={addDaysToDate(date, i)} />))}
     </div>
+}
+
+function addDaysToDate(date: Date, days: number): Date {
+    return new Date(date.getFullYear(), date.getMonth(), date.getUTCDate() + days)
 }
 
 function getNumberOfDaysAfterSunday(date: Date) {

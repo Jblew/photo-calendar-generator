@@ -2,7 +2,7 @@ import { MonthPage } from "./MonthPage"
 
 export function Calendar(
     { noMonths, startDate }:
-    { noMonths: number, startDate: Date }
+        { noMonths: number, startDate: Date }
 ) {
     const months = generateMonths(startDate, noMonths)
 

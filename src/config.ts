@@ -13,5 +13,11 @@ export const config = {
         "Listopad",
         "Grudzień"
     ],
-    daysOfWeek: ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"]
+    daysOfWeek: ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"],
+    significantDays: [
+        {
+            date: new Date(2020, 5 - 1, 8),
+            text: "Rocznica ślubu"
+        }
+    ]
 }
