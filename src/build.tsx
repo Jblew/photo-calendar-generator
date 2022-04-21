@@ -10,9 +10,9 @@ const srcDir = `${projectDir}/src`
 const distDir = `${projectDir}/dist`
 
 const contentHtml = ReactDOMServer.renderToStaticMarkup(
-  <React.StrictMode>
-      <Calendar startDate={new Date(2022, 5 - 1, 1)} noMonths={24} />
-  </React.StrictMode>
+    <React.StrictMode>
+        <Calendar startDate={new Date(2022, 5 - 1, 1)} noMonths={24} />
+    </React.StrictMode>
 );
 
 const documentHtml = `
@@ -21,7 +21,7 @@ const documentHtml = `
 <head>
     <meta charset="utf-8">
     <title>Calendar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     ${contentHtml}
