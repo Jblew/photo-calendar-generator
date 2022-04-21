@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"editor.formatOnSaveMode": "file",
+		"editor.formatOnPaste": true,
+		"editor.tabSize": 4,
+		"editor.autoIndent": "advanced",
+		"editor.rulers": [
+			100
+		],
+	}
+}
