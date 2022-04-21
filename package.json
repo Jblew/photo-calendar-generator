@@ -1,0 +1,13 @@
+{
+  "name": "siejmyplamp",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "build:sass": "node -e \"fs.writeFileSync('style.css', require('sass').compile('style.scss').css)\"",
+    "build": "npm run build:sass"
+  },
+  "dependencies": {
+    "sass": "1.50.0"
+  }
+}
