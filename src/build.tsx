@@ -1,6 +1,12 @@
 import 'reflect-metadata';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import * as fs from "fs";
+import * as sass from "sass";
+
+const projectDir = `${__dirname}/..`
+const srcDir = `${projectDir}/src`
+const distDir = `${projectDir}/dist`
 
 const contentHtml = ReactDOMServer.renderToStaticMarkup(
   <React.StrictMode>
@@ -22,5 +28,7 @@ const documentHtml = `
     ${contentHtml}
 </body>
 </html>
-`
-console.log(documentHtml)
+`;
+
+fs.writeFileSync(`${distDir}/index.html`, documentHtml)
+fs.writeFileSync(`${distDir}/style.css`, sass.compile(`${srcDir}/style.scss`).css)
