@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,9 +21,16 @@
     "emitDecoratorMetadata": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "outDir": "dist"
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": [
+        "*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
