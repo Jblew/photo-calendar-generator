@@ -1,13 +1,22 @@
 {
-  "name": "siejmyplamp",
+  "name": "photo-calendar-generator",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "scripts": {
     "build:sass": "node -e \"fs.writeFileSync('style.css', require('sass').compile('style.scss').css)\"",
-    "build": "npm run build:sass"
+    "build:react": "tsc && node dist/build.js",
+    "build": "npm run build:sass && npm run build:react"
   },
   "dependencies": {
-    "sass": "1.50.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sass": "1.50.0",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
+    "reflect-metadata": "^0.1.13"
   }
 }
