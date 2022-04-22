@@ -30,4 +30,4 @@ const documentHtml = `
 `;
 
 fs.writeFileSync(`${distDir}/index.html`, documentHtml)
-fs.writeFileSync(`${distDir}/style.css`, sass.compile(`${srcDir}/style.scss`).css)
+fs.writeFileSync(`${distDir}/style.css`, sass.compile(`${srcDir}/style/index.scss`).css)

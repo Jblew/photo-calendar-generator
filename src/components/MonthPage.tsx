@@ -7,10 +7,15 @@ export function MonthPage(
         { startDate: Date }
 ) {
     return <section className="month-page">
-        <MonthPhoto />
-        <h1>{config.months[startDate.getMonth()]} {startDate.getFullYear()}</h1>
-        <CalendarDays date={startDate} />
-    </section>
+        <div className="graphics">
+            &nbsp;
+        </div>
+        <div className="calendar">
+            <h1>{config.months[startDate.getMonth()]} {startDate.getFullYear()}</h1>
+            <CalendarDays date={startDate} />
+            &nbsp;
+        </div>
+    </section >
 }
 
 function CalendarDays({ date }: { date: Date }) {
