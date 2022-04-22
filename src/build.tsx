@@ -4,6 +4,7 @@ import ReactDOMServer from 'react-dom/server';
 import * as fs from "fs";
 import * as sass from "sass";
 import { Calendar } from './components';
+import { config } from './config';
 
 const projectDir = `${__dirname}/..`
 const srcDir = `${projectDir}/src`
@@ -11,7 +12,7 @@ const distDir = `${projectDir}/dist`
 
 const contentHtml = ReactDOMServer.renderToStaticMarkup(
     <React.StrictMode>
-        <Calendar startDate={new Date("2022-05-01T00:00:00Z")} noMonths={24} />
+        <Calendar startDate={config.startDate} noMonths={config.calendarLengthMonths} />
     </React.StrictMode>
 );
 
