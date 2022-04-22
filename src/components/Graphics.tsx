@@ -1,3 +1,5 @@
+import { getRandomPhotoURL } from "@/services"
+
 export function Graphics() {
     const types = [
         { className: "mono", count: 1 },
@@ -12,6 +14,11 @@ export function Graphics() {
     // unseeded random can be used because we generate the html statically
     const type = types[Math.floor(Math.random() * types.length)]
     return <div className={"graphics " + type.className}>
-        {[...Array(type.count)].map((_, i) => (<div key={i}></div>))}
+        {[...Array(type.count)].map((_, i) => (<Photo key={i} />))}
     </div>
+}
+
+function Photo() {
+    const url = getRandomPhotoURL()
+    return <div style={{ backgroundImage: `url(${url})` }}></div>
 }

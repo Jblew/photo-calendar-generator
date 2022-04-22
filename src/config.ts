@@ -24,4 +24,6 @@ export const config = {
         }
         return { day: match.groups?.day || "", month: match.groups?.month || "", text: match.groups?.text || "" }
     },
+    photosDir: "./public/photos",
+    photosURL: "/photos/"
 }
