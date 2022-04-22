@@ -16,5 +16,9 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 6fr 4fr;
+    grid-template-rows: 1fr min-content;
+
+    .calendar {
+        align-self: end;
+    }
 }

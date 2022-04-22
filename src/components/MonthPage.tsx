@@ -13,7 +13,6 @@ export function MonthPage(
         <div className="calendar">
             <h1>{config.months[startDate.getMonth()]} {startDate.getFullYear()}</h1>
             <CalendarDays date={startDate} />
-            &nbsp;
         </div>
     </section >
 }
