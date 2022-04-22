@@ -13,6 +13,9 @@ html {
 
 .month-page {
     height: 100vh;
+    page-break-before: always;
+    page-break-after: always;
+    page-break-inside: avoid;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;

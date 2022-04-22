@@ -1,3 +1,11 @@
+.calendar {
+    h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 250%;
+    }
+}
+
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
@@ -27,15 +35,14 @@
         }
 
         .significant-dates {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
             color: #555;
             font-size: 75%;
 
-            li {
-                padding: 0;
-                margin: 0;
+            line-height: 85%;
+            text-transform: capitalize;
+
+            &>span {
+                text-transform: capitalize;
             }
         }
     }
