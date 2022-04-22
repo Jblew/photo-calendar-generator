@@ -1,15 +1,13 @@
 import { config } from "@/config"
 import { Day, EmptyDay } from "./Day"
-import { MonthPhoto } from "./MonthPhoto"
+import { Graphics } from "./Graphics";
 
 export function MonthPage(
     { startDate }:
         { startDate: Date }
 ) {
     return <section className="month-page">
-        <div className="graphics">
-            &nbsp;
-        </div>
+        <Graphics />
         <div className="calendar">
             <h1>{config.months[startDate.getMonth()]} {startDate.getFullYear()}</h1>
             <CalendarDays date={startDate} />
