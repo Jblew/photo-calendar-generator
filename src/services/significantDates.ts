@@ -4,6 +4,7 @@ import { config } from "@/config";
 export interface SignificantDate {
     day: number,
     month: number,
+    year: number,
     text: string
 }
 

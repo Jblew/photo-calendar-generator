@@ -12,5 +12,8 @@ export function SignificantDates({ date }: { date: Date }) {
 }
 
 function significantDatesFilter(date: Date) {
-    return (sf: SignificantDate) => sf.month == date.getMonth() + 1 && sf.day == date.getDate()
+    return (sf: SignificantDate) =>
+        sf.month == date.getMonth() + 1
+        && sf.day == date.getDate()
+        && (sf.year ? sf.year == date.getFullYear() : true)
 }

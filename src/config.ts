@@ -18,12 +18,17 @@ export const config = {
     daysOfWeek: ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"],
     significantDatesFile: "significant-dates.txt", // relative to cwd
     significantDateParser: (line: string, linenum: number) => {
-        const match = /^(?<day>\d\d?)\.(?<month>\d\d?)\s(?<text>.*)$/gmi.exec(line)
+        const match = /^(?<day>\d\d?)\.(?<month>\d\d?)\.?(?<year>\d\d\d\d)?\s(?<text>.*)$/gmi.exec(line)
         if (!match) {
             throw new Error(`Significant dates file contains error in line #${linenum}: ${line}`)
         }
-        return { day: match.groups?.day || "", month: match.groups?.month || "", text: match.groups?.text || "" }
+        return {
+            day: match.groups?.day || null,
+            month: match.groups?.month || null,
+            year: match.groups?.year || null,
+            text: match.groups?.text || null
+        }
     },
     photosDir: "./public/photos",
-    photosURL: "/photos/"
+    photosURL: "/photos"
 }
