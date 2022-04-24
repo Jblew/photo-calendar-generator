@@ -1,13 +1,16 @@
+import { PageConfig } from "@/types"
 import { MonthPage } from "./MonthPage"
 
 export function Calendar(
-    { noMonths, startDate }:
-        { noMonths: number, startDate: Date }
+    { pages, startDate }:
+        { pages: PageConfig[], startDate: Date }
 ) {
-    const months = generateMonths(startDate, noMonths)
+    const months = generateMonths(startDate, pages.length)
 
     return <main className="calendar">
-        {months.map(month => (<MonthPage key={month.toISOString()} startDate={month} />))}
+        {months.map((month, i) => (
+            <MonthPage key={month.toISOString()} startDate={month} page={pages[i]} />
+        ))}
     </main>
 }
 

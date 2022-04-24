@@ -1,6 +1,11 @@
-export const config = {
+import { Config } from "./types"
+
+export const config: Config = {
     startDate: new Date("2022-05-01T00:00:00Z"), // Use UTC ISO date because otherwise summer time changes messes with dates
-    calendarLengthMonths: 24,
+    pages: [
+        { graphicsLayout: "single", photoFilenames: ["default.jpg"] },
+        ...[...Array(23)].map(i => ({ random: true } as const)),
+    ],
     months: [
         "Styczeń",
         "Luty",
@@ -23,10 +28,10 @@ export const config = {
             throw new Error(`Significant dates file contains error in line #${linenum}: ${line}`)
         }
         return {
-            day: match.groups?.day || null,
-            month: match.groups?.month || null,
-            year: match.groups?.year || null,
-            text: match.groups?.text || null
+            day: parseInt(match.groups?.day!),
+            month: parseInt(match.groups?.month!),
+            year: match.groups?.year ? parseInt(match.groups?.year) : undefined,
+            text: match.groups?.text!
         }
     },
     photosDir: "./public/photos",

@@ -12,7 +12,7 @@ const distDir = `${projectDir}/dist`
 
 const contentHtml = ReactDOMServer.renderToStaticMarkup(
     <React.StrictMode>
-        <Calendar startDate={config.startDate} noMonths={config.calendarLengthMonths} />
+        <Calendar startDate={config.startDate} pages={config.pages} />
     </React.StrictMode>
 );
 
