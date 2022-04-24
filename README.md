@@ -1,6 +1,10 @@
-# present-calendar-generator
+# Photo calendar generator
 
-Present calendar generator (initially made for Dominika&amp;Daniel wedding)
+![Demo calendar](./docs/img/demo-cal-1.jpg)
+
+Photo calendar generator (initially made for Dominika&amp;Daniel wedding)
+
+
 
 ## Usage
 
@@ -47,3 +51,14 @@ Present calendar generator (initially made for Dominika&amp;Daniel wedding)
 11. Print to PDF
 12. _(optional)_ Play with the layout settings using `src/style/*.scss` files. Hitting `npm run build` will compile both the HTML and SCSS.
 
+
+
+## Demos
+
+![Demo calendar 1](./docs/img/demo-cal-1.jpg)
+
+![Demo calendar 2](./docs/img/demo-cal-2.jpg)
+
+![Demo calendar 3](./docs/img/demo-cal-3.jpg)
+
+![Demo calendar 4](./docs/img/demo-cal-4.jpg)
