@@ -34,6 +34,6 @@ export const config: Config = {
             text: match.groups?.text!
         }
     },
-    photosDir: "./public/photos",
+    photosDir: "./photos",
     photosURL: "/photos"
 }
