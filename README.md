@@ -43,7 +43,7 @@ Photo calendar generator (initially made for Dominika&amp;Daniel wedding)
     ```
 8. Run 
     ```bash
-    npm serve
+    npm run serve
     ```
 9. Open [http://localhost:8080/](http://localhost:8080/) in your browser.
     > What you see is not a print layout. The screen layout differs from what you will get in the print.
