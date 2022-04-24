@@ -4,7 +4,7 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "build": "tsc && TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/build.js && cp -R photos/* dist/photos/",
+    "build": "tsc && TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/build.js && cp -R photos/ dist/photos/",
     "serve": "http-server ./dist"
   },
   "dependencies": {
